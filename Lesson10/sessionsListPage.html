@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sessions list page</title>
+</head>
+<body>
+<script>
+
+    const sessionsList = JSON.parse(localStorage.getItem('sessionsList'));
+    for (const sessionsListElement of sessionsList) {
+        let h2Element = document.createElement('h2');
+        h2Element.textContent = sessionsListElement;
+        h2Element.style.textAlign = 'center';
+        document.body.appendChild(h2Element);
+    }
+</script>
+</body>
+</html>
