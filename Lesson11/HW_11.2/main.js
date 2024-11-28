@@ -14,9 +14,10 @@ fetch('https://dummyjson.com/recipes')
             let ul = document.createElement('ul');
             for (const ingredient of ingredients) {
                 let li = document.createElement('li');
-                li.textContent = ingredients;
+                li.textContent = `${ingredient}`;
                 ul.appendChild(li);
             }
+
             divEl.append(h1, p, ul);
             document.body.appendChild(divEl);
         }
